@@ -12,8 +12,8 @@ from psychopy import visual,event,core,gui
 
 
 names = open('names.txt', 'r').readlines()
-firstNames = [name.split(' ')[0] for name in names] #0 represents first column in txt file
-lastNames = [name.split(' ')[1] for name in names] #1 indicates second column in txt file
+firstNames = [name.split(' ')[0].strip() for name in names] #0 represents first column in txt file
+lastNames = [name.split(' ')[1].strip() for name in names] #1 indicates second column in txt file
     #print gui.Dlg()
 while True:
     userVar = {'Name':'Enter A First Name'}
